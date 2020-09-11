@@ -1,0 +1,59 @@
+.filter-text {
+    font-size: 16px;
+    display: block;
+    font-weight: bold;
+  }
+  
+  .btn:focus{
+    background-color: inherit;
+    box-shadow: none!important;
+    border-color: white !important;
+  }
+  .filter-button {
+    background-color: #C6E09B !important;
+    color : #000000 !important;
+    border-color: white !important;
+    width: 60px;
+    height: 25px;
+    padding: 0 !important;
+    border-radius: 5px;
+    margin-top : 10px;
+    margin-top : 10px;
+  }
+  
+  .button-right{
+    float: right;
+  }
+  .filter-button-active{
+    background-color: #7BBA01 !important;
+    padding: 2px!important;
+    box-shadow: none!important
+  }
+  .filter-container{
+    background : #ffffff;
+    padding-top: 5px!important;
+    padding-bottom: 20px!important;
+  }
+  
+  .filter-p-text{
+    margin: 0;
+    border-bottom: 1px solid gray;
+    margin: 20px 10px 5px 10px;
+    font-size: 14px;
+  }
+  
+  .filter-year-text{
+    margin: 0;
+    border-bottom: 1px solid gray;
+    margin: 0 20px 10px;
+    font-size: 14px;
+  }
+  
+  .button-container{
+    padding: 0 !important;
+  }
+
+  .reset-button-filter{
+    margin-left: 40px;
+  }
+  

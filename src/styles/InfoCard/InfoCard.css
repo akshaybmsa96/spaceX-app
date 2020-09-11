@@ -1,0 +1,25 @@
+.card-image{
+    background : #f2f2f2f2;
+    height: 228px;
+  }
+  
+  .card-title{
+    font-size: 16px!important;
+    color: #485092;
+    font-weight: bold!important;
+  }
+  
+  .meta-data-span{
+  font-weight: bold;
+  color: #000000;
+  }
+  
+  .meta-data-para{
+    color : #485092;
+    font-size: 14px;
+    margin-bottom: 5px!important;
+  }
+  
+  .mission-id-list{
+    margin-left: 10px;
+  }
