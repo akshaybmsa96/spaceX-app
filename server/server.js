@@ -15,7 +15,7 @@ const app = express();
 
 app.use(express.static("dist/public"));
 
-app.get("/.netlify/functions/spacex", (req, res) => {
+app.get("/*", (req, res) => {
 
   axios.get(BASE_URL).then(response => {
       INITIAL_DATA.data = response.data;
