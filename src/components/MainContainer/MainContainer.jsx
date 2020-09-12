@@ -17,10 +17,10 @@ class MainContainer extends React.Component {
                 <p className="top-text">SpaceX Launch Programs</p>
                 <Container fluid>
                     <Row>
-                        <Col sm={2}>
+                        <Col xl={3} md={4} sm={12}>
                             <FilterContainer />
                         </Col>
-                        <Col sm={10}>
+                        <Col xl={9} md={8} sm={12}>
                             <DataConatiner />
                         </Col>
                     </Row>

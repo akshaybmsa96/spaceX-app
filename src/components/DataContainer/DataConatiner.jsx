@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import InfoCard from '../InfoCard';
 import { connect } from 'react-redux';
 import '../../styles/DataContainer/DataContainer.css';
-import { Button } from 'react-bootstrap';
+import { Button, Col, Row, Container } from 'react-bootstrap';
 
 
 const DataConatiner = (props) => {
@@ -44,11 +44,11 @@ const DataConatiner = (props) => {
     else {
         return (
             <div>
-                <div className="row">
+                <Row>
                     {props.data.slice(0, currentLimit).map((program, index) => {
-                        return <InfoCard key={index} data={program} />
+                        return <Col className="card-coloumn" xl={3} md={6} lg={4} sm={12}> <InfoCard key={index} data={program} /></Col>
                     })}
-                </div>
+                </Row>
                 {showLoadMore && <Button className="load-more btn-primary" onClick={(e) => { loadMore(e, props.data) }} href="#">Load More</Button>}
             </div>
         )

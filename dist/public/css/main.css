@@ -75,17 +75,9 @@ body {
     font-size: 14px;
   }
   
-  .button-container{
-    padding: 0 !important;
-  }
-
-  .reset-button-filter{
-    margin-left: 40px;
-  }
-  
 .card-image{
     background : #f2f2f2f2;
-    height: 228px;
+    height: auto;
   }
   
   .card-title{
@@ -109,8 +101,8 @@ body {
     margin-left: 10px;
   }
 .card-container{
-    width: 250px;
-    margin: 0 10px 10px 0;
+    width: auto;
+    height: 97.5%;
     padding: 10px;
     border-radius: 10px!important;
   
@@ -120,6 +112,11 @@ body {
   font-size: 16px;
   float: right;
   margin-right: 20px;
+}
+
+.card-coloumn{
+  padding-left: 5px!important;
+  padding-right: 5px!important;
 }
 .top-text{
     font-size: 18px;

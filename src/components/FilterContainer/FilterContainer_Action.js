@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 import { BASE_URL } from "../../config/endPoints"
-import { UPDATE_STORE_ACTION, RESET_FILTER_ACTION } from "../../appStore/reducerConstant"
+import { UPDATE_STORE_ACTION } from "../../appStore/reducerConstant"
 
 export const FilterData = (year=null,lauchSuccess=null,landSuccess=null) => (dispatch) => { 
 
