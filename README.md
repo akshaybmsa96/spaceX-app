@@ -43,14 +43,12 @@ Hosted on [https://nameless-lake-22725.herokuapp.com/](https://nameless-lake-227
     
    Clone code using Command :
    
-                git clone https://github.com/akshaybmsa96/spaceX-app.git
+        git clone https://github.com/akshaybmsa96/spaceX-app.git
 
    Then navigate to the Directory and run the Following Commands:
 
         npm install
-
         npm run build
-
         npm run start
 
    Naviagte to localhost:8000 in your browser.
