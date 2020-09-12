@@ -1,7 +1,8 @@
 # SpaceX App
 
 This is a sample React-App With custom  SSR implemented.
-Hosted on [https://nameless-lake-22725.herokuapp.com/](https://nameless-lake-22725.herokuapp.com/)
+
+**Hosted on [https://nameless-lake-22725.herokuapp.com/](https://nameless-lake-22725.herokuapp.com/)**
 
 ## Features 
 
@@ -28,9 +29,10 @@ Hosted on [https://nameless-lake-22725.herokuapp.com/](https://nameless-lake-227
    Features like
    * Arrow fuctions
    * optional chaining
-   * Null coalescing etc
-    and other latest features of JS is used in this Application, which is converted by
-    babel to the Conventional javascript code.
+   * Null coalescing etc.
+   
+   And other latest features of JS is used in this Application, which is converted by
+   babel to the Conventional javascript code.
 
 
 ### IMAGE LAZY LOADING
