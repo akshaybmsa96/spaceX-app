@@ -12,9 +12,13 @@ import { Provider } from "react-redux";
 
 const store = createStore(reducer);
 const app = express();
+const PORT = 8000;
 
 app.use(express.static("dist/public"));
 
+/**
+ * Express Api, returns react app as HTML to browser and initialze store
+ */
 app.get("/*", (req, res) => {
 
   axios.get(BASE_URL).then(response => {
@@ -32,6 +36,6 @@ app.get("/*", (req, res) => {
     //   res.send("Hello Testing")
     // }))
 
-    app.listen(process.env.PORT || 8000, () => {
-      console.log(`Server is listening`);
+    app.listen(process.env.PORT || PORT, () => {
+      console.log(`Server is listening on ${PORT}`);
     });

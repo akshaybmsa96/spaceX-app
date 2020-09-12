@@ -4,18 +4,27 @@ import { connect } from 'react-redux';
 import '../../styles/DataContainer/DataContainer.css';
 import { Button, Col, Row, Container } from 'react-bootstrap';
 
-
+/**
+ * @description Component DataConatiner will return all the space programs
+ * @param {*} props 
+ */
 const DataConatiner = (props) => {
 
     const [showLoadMore, setLoadMore] = useState(false);
     const [currentLimit, setCurrentLimit] = useState(8);
 
+    /**
+     * @description Component did mount hook
+     */
     useEffect(() => {
         if (currentLimit < props.data.length) {
             setLoadMore(true);
         }
     }, [])
 
+    /**
+     * @description React hook Reset current Data limit
+     */
     useEffect(() => {
         setCurrentLimit(8);
         if (currentLimit < props.data.length) {
@@ -25,12 +34,20 @@ const DataConatiner = (props) => {
         }
     }, [props.data.length])
 
+    /**
+     * @description React hook for hide show load more button
+     */
     useEffect(() => {
         if (currentLimit >= props.data.length) {
             setLoadMore(false);
         }
     }, [currentLimit])
 
+    /**
+     * @description function will render more data to user screen
+     * @param {*} e Event object
+     * @param {*} data Data to render
+     */
     const loadMore = (e, data) => {
         e.preventDefault();
         if (currentLimit < data.length) {

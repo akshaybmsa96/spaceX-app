@@ -1,5 +1,9 @@
 import { UPDATE_STORE_ACTION, INITIAL_DATA_ACTION, LOADER_ACTION } from "./reducerConstant";
 
+/**
+ * Reducer Function
+ */
+
 export default function (state , action) {
     switch (action.type) {
         case UPDATE_STORE_ACTION : 

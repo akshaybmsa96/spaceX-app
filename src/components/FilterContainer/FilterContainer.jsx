@@ -4,13 +4,19 @@ import { connect } from 'react-redux';
 import { FilterData, ResetFilter, ShowLoader } from './FilterContainer_Action';
 import '../../styles/FilterContainer/FilterContainer.css';
 
+/**
+ * @description Component Renders the Filter Structure UI
+ */
 class FilterContainer extends React.Component {
 
-        launchFilter = null;
-        landFilter = null;
-        yearFilter = null;
-        years = ["2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"];
+    launchFilter = null;
+    landFilter = null;
+    yearFilter = null;
+    years = ["2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"];
 
+    /**
+     * @description Function will initiate dispatcher action to fetch the filter data from api 
+     */
     filterData = _ => {
         if (!this.yearFilter) {
             alert("Select Year First");
@@ -19,7 +25,10 @@ class FilterContainer extends React.Component {
             this.props.filterData(this.yearFilter, this.launchFilter, this.landFilter)
         }
     }
-
+    
+    /**
+     * @description Function will reset the Screen with initial data
+     */
     resetFilter = _ => {
 
         const selctedFilter = document.querySelectorAll('button.filter-button-active');
@@ -33,7 +42,10 @@ class FilterContainer extends React.Component {
         this.props.filterData();
 
     }
-
+    /**
+     * @description Click Handler for year filter 
+     * @param {*} e Event Object
+     */
     clickHandleYear = e => {
         if (this.yearFilter !== e.target.value) {
             let prevSelected = document.querySelector('button[filtertype="year"].filter-button-active')
@@ -44,6 +56,10 @@ class FilterContainer extends React.Component {
         }
     }
 
+    /**
+     * @description Click Handler for launch filter 
+     * @param {*} e Event Object
+     */
     clickHandleLaunchFilter = e => {
 
         let newFilter;
@@ -68,6 +84,10 @@ class FilterContainer extends React.Component {
 
     }
 
+    /**
+     * @description Click Handler for land filter 
+     * @param {*} e Event Object
+     */
     clickHandleLandFilter = e => {
 
         let newFilter;
@@ -92,6 +112,9 @@ class FilterContainer extends React.Component {
 
     }
 
+    /**
+     * @description Function will return Year Filter jsx 
+     */
     renderYearFilter = _ => {
         return (
             <Container fluid>
@@ -99,7 +122,7 @@ class FilterContainer extends React.Component {
                 <Row md={12} sm={12}>
                     {this.years.map((year, index) => {
                         return <Col xs={6} sm={6} md={6}>
-                            <Button key={index} filtertype={"year"} onClick={this.clickHandleYear} value={year} key={year} className={`filter-button year-button ${index%2!==0 ? 'button-right' : ''}`}>{year}</Button>
+                            <Button key={index} filtertype={"year"} onClick={this.clickHandleYear} value={year} key={year} className={`filter-button year-button ${index % 2 !== 0 ? 'button-right' : ''}`}>{year}</Button>
                         </Col>
                     })}
                 </Row>
@@ -107,6 +130,9 @@ class FilterContainer extends React.Component {
         )
     }
 
+    /**
+     * @description Function will return Launch Filter jsx 
+     */
     renderLaunchFilter = _ => {
         return (
             <Container fluid>
@@ -119,6 +145,9 @@ class FilterContainer extends React.Component {
         )
     }
 
+    /**
+     * @description Function will return Land Filter jsx 
+     */
     renderLandFilter = _ => {
         return (
             <Container fluid>
@@ -131,6 +160,9 @@ class FilterContainer extends React.Component {
         )
     }
 
+    /**
+     * @description Function will return Reset Filter jsx 
+     */
     renderResetFilter = _ => {
 
         return (

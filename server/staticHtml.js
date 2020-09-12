@@ -1,3 +1,8 @@
+/**
+ * @description function returns static html with rendered React app
+ * @param markup - html from reactDomServer render
+ * @param data - initial data to pass to client
+ */
 export default (markup,data) => {
 
     return `<!DOCTYPE html lang="en">

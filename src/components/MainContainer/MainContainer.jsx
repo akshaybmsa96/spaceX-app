@@ -5,11 +5,17 @@ import { Container, Row, Col } from 'react-bootstrap'
 import PageLoader from '../PageLoader';
 import '../../styles/MainContainer/MainContainer.css'
 
-
+/**
+ * @description Component the the Wrapper of Filter component and Data Component
+ */
 class MainContainer extends React.Component {
 
     state = { hasError : false };
 
+    /**
+     * @description Error boundary static method to notify component if something goes wrong
+     * @param {*} error 
+     */
     static getDerivedStateFromError(error) {
         console.log('error',error);
         return { hasError: true };

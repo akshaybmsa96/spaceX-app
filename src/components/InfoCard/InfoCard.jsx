@@ -2,6 +2,10 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import '../../styles/InfoCard/InfoCard.css'
 
+/**
+ * @description  Component will return a Single Card of Program
+ * @param {*} props 
+ */
 const InfoCard = props => {
 
     return (
@@ -15,6 +19,10 @@ const InfoCard = props => {
     )
 }
 
+/**
+ * @description Functoin will return JSX of program meta data
+ * @param {*} data data from api
+ */
 const CardMetaData = data => {
     return (
         <React.Fragment>
@@ -30,7 +38,10 @@ const CardMetaData = data => {
         </React.Fragment>
     )
 }
-
+/**
+ * @description Function will return jsx of mission ids of a program
+ * @param {*} missionIds data from api
+ */
 const GetMissionIds = missionIds =>{
     return missionIds.map((id,index)=>{
         return <li key={index} className="mission-id-list">{id}</li>

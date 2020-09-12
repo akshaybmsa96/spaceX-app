@@ -3,6 +3,10 @@ import {connect} from 'react-redux';
 import LoaderGif from '../../asset/loader.gif'
 import '../../styles/PageLoader/PageLoader.css'
 
+/**
+ * @description Component Will Render loader on screen during API call
+ * @param {*} props 
+ */
 const PageLoader = props => {
          if(!props.loader) return null;
 
