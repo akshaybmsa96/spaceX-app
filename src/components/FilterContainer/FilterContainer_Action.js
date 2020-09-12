@@ -20,7 +20,7 @@ export const FilterData = (year=null,lauchSuccess=null,landSuccess=null) => (dis
             payload: { data, loader : false }
         })
 
-        browserHistory.push(`/${FILTER_URL}`)
+        browserHistory.replace(`/${FILTER_URL}`)
 
     }).catch(err => {
         console.log('err',err)

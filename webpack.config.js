@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 
 const clientConfig = {
+    mode: "production",
     entry: "./client/index.js",
     output: {
         filename: `bundle.js`,
@@ -54,6 +55,7 @@ const clientConfig = {
 };
 
 const serverConfig = {
+    mode: "production",
     entry: "./server/server.js",
     target: "node",
     output: {
