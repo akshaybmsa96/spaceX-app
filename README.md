@@ -43,19 +43,19 @@ Hosted on [https://nameless-lake-22725.herokuapp.com/](https://nameless-lake-227
     
     Clone code using Command :
 
-    ```bash
+    ```
         git clone https://github.com/akshaybmsa96/spaceX-app.git
     ```
 
     Then navigate to the Directory and run the Following Commands:
 
-    ```bash
+    ```
         npm install
     ```
-    ```bash
+    ```
         npm run build
     ```
-    ```bash
+    ```
         npm run start
     ```
 
@@ -64,7 +64,7 @@ Hosted on [https://nameless-lake-22725.herokuapp.com/](https://nameless-lake-227
 ## LIGHTHOUSE REPORT 
     Application performs good at various parameters on Lighthouse Tool.
 
-    ![alt text](https://user-images.githubusercontent.com/18141199/93003082-511d7180-f559-11ea-8793-d25c267089df.png)
+    ![Alt Text](https://user-images.githubusercontent.com/18141199/93003082-511d7180-f559-11ea-8793-d25c267089df.png)
 
 
 
