@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { FilterData, ResetFilter } from './FilterContainer_Action';
+import { FilterData, ResetFilter, ShowLoader } from './FilterContainer_Action';
 import '../../styles/FilterContainer/FilterContainer.css';
 
 class FilterContainer extends React.Component {
@@ -18,6 +18,7 @@ class FilterContainer extends React.Component {
         if (!this.yearFilter) {
             alert("Select Year First");
         } else {
+            this.props.showLoader(true);
             this.props.filterData(this.yearFilter, this.launchFilter, this.landFilter)
         }
     }
@@ -167,6 +168,9 @@ const mapDispatchToProps = dispatch => {
         filterData: (year, lauchSuccess, landSuccess) => {
             dispatch(FilterData(year, lauchSuccess, landSuccess))
         },
+        showLoader: (value) => {
+            dispatch(ShowLoader(value));
+        }
     }
 }
 

@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 import { BASE_URL } from "../../config/endPoints"
-import { UPDATE_STORE_ACTION } from "../../appStore/reducerConstant"
+import { UPDATE_STORE_ACTION, LOADER_ACTION } from "../../appStore/reducerConstant"
 
 export const FilterData = (year=null,lauchSuccess=null,landSuccess=null) => (dispatch) => { 
 
@@ -16,14 +16,22 @@ export const FilterData = (year=null,lauchSuccess=null,landSuccess=null) => (dis
 
         dispatch({
             type : UPDATE_STORE_ACTION,
-            payload: { data }
+            payload: { data, loader : false }
         })
 
     }).catch(err => {
         console.log('err',err)
         dispatch({
             type : '',
+            payload: { data : [], loader : false }
         })
     })
 
+}
+
+export const ShowLoader = (value) => (dispatch) =>{
+    dispatch({
+        type : LOADER_ACTION,
+        payload: { loader : value }
+    })
 }

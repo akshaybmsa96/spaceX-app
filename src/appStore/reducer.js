@@ -1,4 +1,4 @@
-import { UPDATE_STORE_ACTION, INITIAL_DATA_ACTION } from "./reducerConstant";
+import { UPDATE_STORE_ACTION, INITIAL_DATA_ACTION, LOADER_ACTION } from "./reducerConstant";
 
 export default function (state , action) {
     switch (action.type) {
@@ -8,7 +8,10 @@ export default function (state , action) {
         case INITIAL_DATA_ACTION :
             return action.payload;
 
+        case LOADER_ACTION : 
+            return {...state, ...action.payload}
+
         default:
-            return {...state} ;
+            return {...action.payload, ...state} ;
     }
 }
