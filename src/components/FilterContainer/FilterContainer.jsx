@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { FilterData, ResetFilter, ShowLoader } from './FilterContainer_Action';
+import { FilterData, ShowLoader } from './FilterContainer_Action';
 import '../../styles/FilterContainer/FilterContainer.css';
 
 /**
@@ -122,7 +122,7 @@ class FilterContainer extends React.Component {
                 <Row md={12} sm={12}>
                     {this.years.map((year, index) => {
                         return <Col xs={6} sm={6} md={6}>
-                            <Button key={index} filtertype={"year"} onClick={this.clickHandleYear} value={year} key={year} className={`filter-button year-button ${index % 2 !== 0 ? 'button-right' : ''}`}>{year}</Button>
+                            <Button key={index} filtertype={"year"} onClick={this.clickHandleYear} value={year} className={`filter-button year-button ${index % 2 !== 0 ? 'button-right' : ''}`}>{year}</Button>
                         </Col>
                     })}
                 </Row>

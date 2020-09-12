@@ -19,29 +19,23 @@ const DataConatiner = (props) => {
     useEffect(() => {
         if (currentLimit < props.data.length) {
             setLoadMore(true);
+        } else {
+            setLoadMore(false);
         }
-    }, [])
+    },[currentLimit,props.data.length])
 
     /**
      * @description React hook Reset current Data limit
      */
     useEffect(() => {
-        setCurrentLimit(8);
-        if (currentLimit < props.data.length) {
-            setLoadMore(true);
-        } else {
-            setLoadMore(false);
+        if(props.newData){
+            setCurrentLimit(8);
         }
-    }, [props.data.length])
+    }, [props.newData])
 
     /**
      * @description React hook for hide show load more button
      */
-    useEffect(() => {
-        if (currentLimit >= props.data.length) {
-            setLoadMore(false);
-        }
-    }, [currentLimit])
 
     /**
      * @description function will render more data to user screen
@@ -74,7 +68,8 @@ const DataConatiner = (props) => {
 
 const mapStateToProps = state => {
     return {
-        data: state.data
+        data: state.data,
+        newData : state.loader
     }
 }
 

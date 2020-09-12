@@ -13,7 +13,7 @@ const PageLoader = props => {
         return ( 
             <div class="loader-container d-flex justify-content-center">
                 <div className="loader">
-                    <img src={LoaderGif} />
+                    <img alt={"loader gif"} src={LoaderGif} />
                 </div>
             </div>
          );
