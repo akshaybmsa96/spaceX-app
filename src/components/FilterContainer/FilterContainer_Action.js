@@ -1,7 +1,8 @@
 
 import axios from 'axios'
 import { BASE_URL } from "../../config/endPoints"
-import { UPDATE_STORE_ACTION, LOADER_ACTION } from "../../appStore/reducerConstant"
+import { UPDATE_STORE_ACTION, LOADER_ACTION } from "../../appStore/reducerConstant";
+import { browserHistory } from 'react-router';
 
 export const FilterData = (year=null,lauchSuccess=null,landSuccess=null) => (dispatch) => { 
 
@@ -18,6 +19,8 @@ export const FilterData = (year=null,lauchSuccess=null,landSuccess=null) => (dis
             type : UPDATE_STORE_ACTION,
             payload: { data, loader : false }
         })
+
+        browserHistory.push(`/${FILTER_URL}`)
 
     }).catch(err => {
         console.log('err',err)

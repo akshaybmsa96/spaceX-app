@@ -32,6 +32,7 @@ class FilterContainer extends React.Component {
         this.launchFilter = null;
         this.landFilter = null;
         this.yearFilter = null;
+        this.props.showLoader(true);
         this.props.filterData();
 
     }
