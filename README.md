@@ -6,65 +6,60 @@ Hosted on [https://nameless-lake-22725.herokuapp.com/](https://nameless-lake-227
 ## Features 
 
 ### REACT SSR(server side rendering)
-    Server-side rendering (SSR) is when content on your webpage is rendered on the server and not on your browser using JavaScript
-    Hence, the first load of the application is much faster than Client side rendering.
+   Server-side rendering (SSR) is when content on your webpage is rendered on the server and not on your browser using JavaScript
+   Hence, the first load of the application is much faster than Client side rendering.
     
-    Express framework is used along side of ReactDOMServer to implement the same.
+   Express framework is used along side of ReactDOMServer to implement the same.
 
 ### RESPONSIVE
-    This application has adaptive layout to various screen sizes(Pc, Tablet, Mobile phone).
-    React-bootstrap is integrated with this application to make it responsive using Components
-    like Container, Row, Columns, Card UI etc.
+   This application has adaptive layout to various screen sizes(Pc, Tablet, Mobile phone).
+   React-bootstrap is integrated with this application to make it responsive using Components
+   like Container, Row, Columns, Card UI etc.
 
 ### WEBPACK and BABEL CONFIGURED
-    Webpack is a very famous module bundler.
-    This application is configured with different configurations for server and client.
-    webpack version 4 is used in this application
+   Webpack is a very famous module bundler.
+   This application is configured with different configurations for server and client.
+   webpack version 4 is used in this application
 
-    Babel is a open-source JavaScript transcompiler that is mainly used to convert
-    ECMAScript 2015+ code into a backwards compatible version of JavaScript that can be 
-    run by older JavaScript engines.
+   Babel is a open-source JavaScript transcompiler that is mainly used to convert
+   ECMAScript 2015+ code into a backwards compatible version of JavaScript that can be 
+   run by older JavaScript engines.
 
-    Features like
-        * **Arrow fuctions
-        * **optional chaining
-        * **null coalescing etc
+   Features like
+   * Arrow fuctions
+   * optional chaining
+   * Null coalescing etc
     and other latest features of JS is used in this Application, which is converted by
     babel to the Conventional javascript code.
 
 
 ### IMAGE LAZY LOADING
-    The rendering is not being blocked by the image loading process.
-    NOTE : Supported in Chrome 76+
+   The rendering is not being blocked by the image loading process.
+   NOTE : Supported in Chrome 76+
 
 
 ##  STEPS TO RUN ON LOCAL MACHINE 
-    You can run this application on your local Environment by Following these steps : 
+   You can run this application on your local Environment by Following these steps : 
     
-    Clone code using Command :
+   Clone code using Command :
+   
+                git clone https://github.com/akshaybmsa96/spaceX-app.git
 
-    ```
-        git clone https://github.com/akshaybmsa96/spaceX-app.git
-    ```
+   Then navigate to the Directory and run the Following Commands:
 
-    Then navigate to the Directory and run the Following Commands:
-
-    ```
         npm install
-    ```
-    ```
-        npm run build
-    ```
-    ```
-        npm run start
-    ```
 
-    Naviagte to localhost:8000 in your browser.
+        npm run build
+
+        npm run start
+
+   Naviagte to localhost:8000 in your browser.
     
 ## LIGHTHOUSE REPORT 
-    Application performs good at various parameters on Lighthouse Tool.
+   Application performs good at various parameters on Lighthouse Tool.
+   
 
-    ![Alt Text](https://user-images.githubusercontent.com/18141199/93003082-511d7180-f559-11ea-8793-d25c267089df.png)
+   ![Alt Text](https://user-images.githubusercontent.com/18141199/93003082-511d7180-f559-11ea-8793-d25c267089df.png)
 
 
 
