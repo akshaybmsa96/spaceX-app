@@ -26,9 +26,9 @@ Hosted on [https://nameless-lake-22725.herokuapp.com/](https://nameless-lake-227
     run by older JavaScript engines.
 
     Features like
-        ->Arrow fuctions
-        ->optional chaining
-        ->null coalescing etc
+        * **Arrow fuctions
+        * **optional chaining
+        * **null coalescing etc
     and other latest features of JS is used in this Application, which is converted by
     babel to the Conventional javascript code.
 
