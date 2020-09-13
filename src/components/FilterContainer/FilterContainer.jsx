@@ -121,8 +121,8 @@ class FilterContainer extends React.Component {
                 <p className="d-flex justify-content-center filter-year-text">Launch Year</p>
                 <Row md={12} sm={12}>
                     {this.years.map((year, index) => {
-                        return <Col xs={6} sm={6} md={6}>
-                            <Button key={index} filtertype={"year"} onClick={this.clickHandleYear} value={year} className={`filter-button year-button ${index % 2 !== 0 ? 'button-right' : ''}`}>{year}</Button>
+                        return <Col key={index} xs={6} sm={6} md={6}>
+                            <Button filtertype={"year"} onClick={this.clickHandleYear} value={year} className={`filter-button year-button ${index % 2 !== 0 ? 'button-right' : ''}`}>{year}</Button>
                         </Col>
                     })}
                 </Row>
@@ -138,8 +138,8 @@ class FilterContainer extends React.Component {
             <Container fluid>
                 <p className="filter-p-text d-flex justify-content-center">Successful Launch</p>
                 <Row>
-                    <Col xs={6} sm={6} md={6}><Button data-toggle="toggle" filtertype={"launch"} onClick={this.clickHandleLaunchFilter} value={"launch_success_true"} className="filter-button">True</Button></Col>
-                    <Col xs={6} sm={6} md={6}><Button data-toggle="toggle" filtertype={"launch"} onClick={this.clickHandleLaunchFilter} value={"launch_success_false"} className="filter-button button-right">False</Button></Col>
+                    <Col key={1} xs={6} sm={6} md={6}><Button data-toggle="toggle" filtertype={"launch"} onClick={this.clickHandleLaunchFilter} value={"launch_success_true"} className="filter-button">True</Button></Col>
+                    <Col key={2} xs={6} sm={6} md={6}><Button data-toggle="toggle" filtertype={"launch"} onClick={this.clickHandleLaunchFilter} value={"launch_success_false"} className="filter-button button-right">False</Button></Col>
                 </Row>
             </Container>
         )
@@ -153,8 +153,8 @@ class FilterContainer extends React.Component {
             <Container fluid>
                 <p className="filter-p-text d-flex justify-content-center">Successful Landing</p>
                 <Row>
-                    <Col xs={6} sm={6} md={6}><Button data-toggle="toggle" filtertype={"land"} onClick={this.clickHandleLandFilter} value={"land_success_true"} className="filter-button">True</Button></Col>
-                    <Col xs={6} sm={6} md={6}><Button data-toggle="toggle" filtertype={"land"} onClick={this.clickHandleLandFilter} value={"land_success_false"} className="filter-button button-right">False</Button></Col>
+                    <Col key={1} xs={6} sm={6} md={6}><Button data-toggle="toggle" filtertype={"land"} onClick={this.clickHandleLandFilter} value={"land_success_true"} className="filter-button">True</Button></Col>
+                    <Col key={2} xs={6} sm={6} md={6}><Button data-toggle="toggle" filtertype={"land"} onClick={this.clickHandleLandFilter} value={"land_success_false"} className="filter-button button-right">False</Button></Col>
                 </Row>
             </Container>
         )

@@ -11,7 +11,7 @@ const PageLoader = props => {
          if(!props.loader) return null;
 
         return ( 
-            <div class="loader-container d-flex justify-content-center">
+            <div className="loader-container d-flex justify-content-center">
                 <div className="loader">
                     <img alt={"loader gif"} src={LoaderGif} />
                 </div>

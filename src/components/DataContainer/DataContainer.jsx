@@ -10,7 +10,7 @@ import { Button, Col, Row, Container } from 'react-bootstrap';
  */
 const DataConatiner = (props) => {
 
-    const [showLoadMore, setLoadMore] = useState(false);
+    const [showLoadMore, setLoadMore] = useState(true);
     const [currentLimit, setCurrentLimit] = useState(8);
 
     /**
@@ -57,7 +57,7 @@ const DataConatiner = (props) => {
             <Container>
                 <Row>
                     {props.data.slice(0, currentLimit).map((program, index) => {
-                        return <Col className="card-coloumn" xl={3} md={6} lg={4} sm={12}> <InfoCard key={index} data={program} /></Col>
+                        return <Col key={index} className="card-coloumn" xl={3} md={6} lg={4} sm={12}> <InfoCard data={program} /></Col>
                     })}
                 </Row>
                 {showLoadMore && <Button className="load-more btn-primary" onClick={(e) => { loadMore(e, props.data) }} href="#">Load More</Button>}

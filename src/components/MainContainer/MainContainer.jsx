@@ -17,7 +17,7 @@ class MainContainer extends React.Component {
      * @param {*} error 
      */
     static getDerivedStateFromError(error) {
-        console.log('error',error);
+        //console.log('error',error);
         return { hasError: true };
       }
 
@@ -30,10 +30,10 @@ class MainContainer extends React.Component {
                 <p className="top-text">SpaceX Launch Programs</p>
                 <Container fluid>
                     <Row>
-                        <Col xl={3} md={4} sm={12}>
+                        <Col key={1} xl={3} md={4} sm={12}>
                             <FilterContainer />
                         </Col>
-                        <Col xl={9} md={8} sm={12}>
+                        <Col key={2} xl={9} md={8} sm={12}>
                             <DataConatiner />
                         </Col>
                     </Row>

@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MainContainer  from '../../../src/components/MainContainer';
+import App  from '../src/App';
 import { mount } from 'enzyme';
 
-
-describe('Testing MainContainer Component', () => {
+describe('Testing App Component', () => {
     const div = document.createElement('div');
-    mount(<MainContainer />,div);
+    mount(<App />,div);
 
     it('renders without crashing', () => {
-        ReactDOM.render(<MainContainer />,div); 
+        ReactDOM.render(<App />,div); 
         ReactDOM.unmountComponentAtNode(div);
         expect(typeof(ReactDOM.unmountComponentAtNode)).toEqual('function');
     });

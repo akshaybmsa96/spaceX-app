@@ -10,7 +10,7 @@ const InfoCard = props => {
 
     return (
         <Card className="card-container">
-            <Card.Img loading="lazy" alt={props.data?.rocket?.rocket_name} className="card-image" variant="top" src={props.data.links?.mission_patch_small || "https://www.spacex.com/static/images/share.jpg"} />
+            <Card.Img loading="lazy" alt={props.data?.rocket?.rocket_name} className="card-image" variant="top" src={props.data?.links.mission_patch_small || "https://www.spacex.com/static/images/share.jpg"} />
             <Card.Body>
                 <Card.Title className="card-title">{props.data?.mission_name} #{props.data?.flight_number}</Card.Title>
                 {CardMetaData(props.data)}
@@ -28,7 +28,7 @@ const CardMetaData = data => {
         <React.Fragment>
             <div className="meta-data-para">
                 <span className="meta-data-span">Mission Ids:</span> 
-                 <ul>{GetMissionIds(data.mission_id)}</ul></div>
+                 <ul>{GetMissionIds(data?.mission_id)}</ul></div>
             <p className="meta-data-para">
                 <span className="meta-data-span">Launch Year:</span> {data?.launch_year}</p>
             <p className="meta-data-para">
@@ -43,7 +43,7 @@ const CardMetaData = data => {
  * @param {*} missionIds data from api
  */
 const GetMissionIds = missionIds =>{
-    return missionIds.map((id,index)=>{
+    return missionIds?.map((id,index)=>{
         return <li key={index} className="mission-id-list">{id}</li>
     })
 }

@@ -18,7 +18,7 @@ export const FilterData = (year=null,lauchSuccess=null,landSuccess=null) => (dis
     const LAND_FILTER = (landSuccess!==null ) ? `&land_success=${landSuccess}` : '';
     const FILTER_URL = YEAR_FILTER + LAUNCH_FILTER + LAND_FILTER;
 
-    axios.get(BASE_URL + FILTER_URL).then(res=>{
+    return axios.get(BASE_URL + FILTER_URL).then(res=>{
 
         const data = res.data;
 

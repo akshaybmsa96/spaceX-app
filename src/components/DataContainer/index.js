@@ -1,2 +1,2 @@
-import DataConatiner from './DataConatiner.jsx';
-export default DataConatiner;
+import DataContainer from './DataContainer.jsx';
+export default DataContainer;
