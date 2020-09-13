@@ -121,6 +121,12 @@ module.exports = {
   
     // The test environment that will be used for testing
     testEnvironment: 'jsdom',
+    testEnvironmentOptions: {
+      // only string values is supported??
+      beforeParse (window) {
+        window.alert = (msg) => {  };
+      }
+    }, 
   
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
